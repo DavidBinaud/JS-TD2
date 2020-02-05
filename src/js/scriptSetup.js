@@ -36,3 +36,4 @@ let match3 = new Match(eq5,eq6);
 let match4 = new Match(eq7,eq8);
 
 let journee1 = new Journee(match1,match2,match3,match4);
+journee1.afficher();
