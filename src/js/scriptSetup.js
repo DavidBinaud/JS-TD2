@@ -7,5 +7,13 @@ let eq1 = new Equipe("PSG");
 // eq1.mise_a_jour(2,1);
 
 let eq2 = new Equipe("FCN");
+eq1.affichage();
+eq2.affichage();
 
 let match1 = new Match(eq1,eq2);
+match1.jouer();
+match1.maj_equipes();
+match1.affichage();
+
+eq1.affichage();
+eq2.affichage();

@@ -9,15 +9,18 @@ class Match {
 	}
 
 	jouer() {
-		// à compléter
+		this.res1 = Math.floor(Math.random()*4.5+0.5);
+		this.res2 = Math.floor(Math.random()*4.5);
+		this.played = true;
 	}
 
 	maj_equipes() {
-		// à compléter
+		this.eq1.mise_a_jour(this.res1,this.res2);
+		this.eq2.mise_a_jour(this.res2,this.res1);
 	}
 
 	affichage() {
-		// à compléter
+		console.log(this.eq1.nom + "	" + this.res1 +" - " + this.res2 + " " + this.eq2.nom);
 	}
 
 }
