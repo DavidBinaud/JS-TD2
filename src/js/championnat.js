@@ -22,11 +22,15 @@ class Championnat {
 	}
 
 	jouer_journee(i) {
-		// à compléter
+		if(i > 0 && i < this.journees.length){
+			this.journees[i-1].jouer();
+		}
 	}
 
 	afficher_journee(i) {
-		// à compléter
+		if(i > 0 && i < this.journees.length){
+			this.journees[i-1].afficher();
+		}
 	}
 
 	afficher_classement() {

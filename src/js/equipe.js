@@ -2,7 +2,7 @@ class Equipe {
 
 	constructor(nom) {
 		this.nom = nom;
-		this.classement = 0;
+		this.classement = 1;
 		this.pts = 0;
 		this.G = 0;
 		this.N = 0;
