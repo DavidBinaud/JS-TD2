@@ -13,7 +13,7 @@ class Equipe {
 	}
 
 	evaluer() {
-		return this.pts * 10000 + (this.bp - this.bc) * 100 + this.bp + this.evaluation;
+		this.evaluation = this.pts * 10000 + (this.bp - this.bc) * 100 + this.bp + Math.random();
 	}
 
 	affichage() {
@@ -21,7 +21,17 @@ class Equipe {
 	} 
 
 	mise_a_jour(bp,bc) {
-		// à compléter
+		if(bp === bc){
+			this.N++;
+		}else if(bp > bc){
+			this.G++;
+		}else{
+			this.P++;
+		}
+		this.pts = this.G * 3 + this.N;
+		this.bp += bp;
+		this.bc += bc;
+		this.evaluer();
 	}
 
 }
