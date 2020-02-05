@@ -34,11 +34,25 @@ class Championnat {
 	}
 
 	afficher_classement() {
-		// à compléter
+		let divTitres = document.getElementById("titres");
+		divTitres.innerHTML = "<table> <tr> <td>Rang</td> <td>Nom</td> <td>Points</td> <td>G</td> <td>N</td> <td>P</td>  <td>bp</td> <td>bc</td> <td>diff</td> </tr> </table>";
+
+
+		for (var i = 0; i <  this.tabEquipes.length - 1; i++) {
+				let divClass = document.getElementById(i+1);
+				divClass.innerHTML = "<table> <tr> <td>" + this.tabEquipes[i].classement + "<td>" + this.tabEquipes[i].nom + "</td> <td>" + this.tabEquipes[i].pts +"</td> <td>" + this.tabEquipes[i].G + "</td> <td>" + this.tabEquipes[i].N + "</td> <td>" + this.tabEquipes[i].P + "</td>  <td>" + this.tabEquipes[i].bp + "</td> <td>" + this.tabEquipes[i].bc + "</td> <td>" + (this.tabEquipes[i].bp - this.tabEquipes[i].bc) + "</td> </tr> </table>";
+		}
+
 	}
 
-	classer_eqipes() {
-		// à compléter
+	
+
+	classer_equipes() {
+		this.tabEquipes.sort(function(a,b){return b.evaluation - a.evaluation;});
+
+		for (var i = 0; i < this.tabEquipes.length; i++) {
+			this.tabEquipes[i].classement = i+1;
+		}
 	}
 
 }
