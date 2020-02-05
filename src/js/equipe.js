@@ -17,8 +17,8 @@ class Equipe {
 	}
 
 	affichage() {
-		// à compléter
-	}
+		console.log(this.classement.toString() + " " + this.nom + " " + this.points.toString() + " " + this.matchWon.toString() + " " + this.matchDraw.toString() + " " + this.matchLost.toString() + " " +  this.goalsGiven.toString() + " " + this.goalsReceived.toString() + " " + (this.goalsGiven - this.goalsReceived).toString());
+	} 
 
 	mise_a_jour(bp,bc) {
 		// à compléter
